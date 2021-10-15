@@ -6,13 +6,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script>
 	
+function bye(){
+	window.close();
+}
+	
 function zap(){
 	window.open("whatsapp://chat/", "_self");
-	setTimeout(function bye() { window.close();}, 5000)	
+	setTimeout(bye, 2000)	
 }
+	
 function api()
 {
 	window.open("whatsapp://send/?phone=55"+ddd.value+celular.value, "_self");
+	setTimeout(bye, 2000)	
 }
 </script>
 
