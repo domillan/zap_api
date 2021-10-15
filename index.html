@@ -7,18 +7,18 @@
 <script>
 	
 function bye(){
-	window.close();
+	content.innerHTML = "Certo. Agora você pode fechar esta página"
 }
 	
 function zap(){
 	window.open("whatsapp://chat/", "_self");
-	setTimeout(bye, 2000)	
+	bye();
 }
 	
 function api()
 {
 	window.open("whatsapp://send/?phone=55"+ddd.value+celular.value, "_self");
-	setTimeout(bye, 2000)	
+	bye();
 }
 </script>
 
@@ -28,7 +28,7 @@ function api()
 <img onclick="zap()" style="width: 7%; height: auto;" class="rounded mx-auto d-block" src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png">
 </div>
 
-<div class="p-5 container-fluid">
+<div id="content" class="p-5 container-fluid">
 <form onsubmit="api(); return false;">
 <div class="p-5 row">
   <div class="w-25 mb-3">
