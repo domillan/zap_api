@@ -17,7 +17,7 @@ function zap(){
 	
 function api()
 {
-	window.open("whatsapp://send/?phone=55"+ddd.value+celular.value, "_self");
+	window.open("whatsapp://send/?phone=55"+ddd.value+(celular.value).replace(/[^0-9]|/gi, ""), "_self");
 	bye();
 }
 </script>
@@ -130,7 +130,7 @@ function api()
   </div>
   <div class="w-50 mb-3">
     <label for="celular" class="form-label">Celular (apenas números)</label>
-    <input required type="tel" placeholder="99999999" class="form-control" pattern="\d*" id="celular">
+    <input required type="tel" placeholder="99999999" class="form-control" id="celular">
   </div>
   
   <div class="w-25 mb-3">
